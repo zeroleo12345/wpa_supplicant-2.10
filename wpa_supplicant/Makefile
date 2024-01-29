@@ -4,12 +4,16 @@ ifndef CONFIG_NO_WPA_PASSPHRASE
 BINALL += wpa_passphrase
 endif
 
+ifdef test
+ALL = eapol_test
+else
 ALL = $(BINALL)
 ALL += systemd/wpa_supplicant.service
 ALL += systemd/wpa_supplicant@.service
 ALL += systemd/wpa_supplicant-nl80211@.service
 ALL += systemd/wpa_supplicant-wired@.service
 ALL += dbus/fi.w1.wpa_supplicant1.service
+endif
 ifdef CONFIG_BUILD_WPA_CLIENT_SO
 ALL += libwpa_client.so
 endif
