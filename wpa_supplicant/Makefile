@@ -4,6 +4,7 @@ ifndef CONFIG_NO_WPA_PASSPHRASE
 BINALL += wpa_passphrase
 endif
 
+## zlx start
 ifdef test
 ALL = eapol_test
 else
@@ -17,6 +18,10 @@ endif
 ifdef CONFIG_BUILD_WPA_CLIENT_SO
 ALL += libwpa_client.so
 endif
+
+CFLAGS += -I/usr/include/x86_64-linux-gnu/openssl
+LDFLAGS = -L/usr/lib/x86_64-linux-gnu/
+## zlx end
 
 EXTRA_TARGETS=dynamic_eap_methods
 
