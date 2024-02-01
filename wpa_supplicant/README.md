@@ -6,7 +6,7 @@ make test=1
 
 ls -al /app/third_party/wpa_supplicant-2.10/wpa_supplicant/eapol_test
 
-ap /app/third_party/wpa_supplicant-2.10/wpa_supplicant/eapol_test /app/tools/simulator/bin/
+cp /app/third_party/wpa_supplicant-2.10/wpa_supplicant/eapol_test /app/tools/simulator/bin/
 ```
 
 
