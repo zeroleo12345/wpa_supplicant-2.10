@@ -4,7 +4,7 @@
 make clean
 make test=1
 
-ls /app/third_party/wpa_supplicant-2.10/wpa_supplicant/eapol_test
+ls -al /app/third_party/wpa_supplicant-2.10/wpa_supplicant/eapol_test
 ```
 
 
